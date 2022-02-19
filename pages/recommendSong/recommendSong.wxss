@@ -1,0 +1,97 @@
+/* pages/recommendSong/recommendSong.wxss */
+/* 头部区域 */
+.recommendSong-container .header {
+  position: relative;
+  width: 100%;
+  height: 300rpx;
+}
+.header image {
+  width: 100%;
+  height: 100%;
+}
+.header .data {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+.data .day {
+  font-size: 80rpx;
+  color: ivory;
+  text-shadow: 2rpx 2rpx #ccc;
+}
+.data .month {
+  font-size: 40rpx;
+  color: ivory;
+  text-shadow: 2rpx 2rpx #ccc;
+}
+
+/* 列表区域 */
+.list-container {
+  position: relative;
+  top: -20rpx;
+  padding: 0 30rpx;
+  border-radius: 30rpx;
+  background: #fff;
+}
+
+/* 列表头部区域 */
+.list-header {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.list-header .more {
+  float: right;
+}
+
+/* 列表内容区域 */
+.list-scroll {
+  height: calc(100vh - 380rpx);
+}
+.scroll-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.scroll-item image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+.music-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+  max-width: 400rpx;
+}
+.music-info .music-name {
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 36rpx;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.music-info .author {
+  max-width: 400rpx;
+  display: flex;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.music-info .music-author {
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 26rpx;
+  color: grey;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.scroll-item .iconfont {
+  position: absolute;
+  right: -20rpx;
+  width: 50rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: grey;
+}

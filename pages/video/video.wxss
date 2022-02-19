@@ -1,0 +1,104 @@
+/* pages/video/video.wxss */
+/* 头部搜索区域 */
+.video-header {
+  display: flex;
+  padding: 10rpx 20rpx;
+}
+.video-header image {
+  width: 60rpx;
+  height: 60rpx;
+
+}
+.video-header .video-search {
+  text-indent: 20rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 25rpx;
+  margin: 5rpx 20rpx;
+  flex: 1;
+}
+
+/* 导航区域 */
+.nav-scroll {
+  display: flex;
+  width: 692rpx;
+  padding: 0 30rpx;
+  padding-top: 10rpx;
+  white-space: nowrap;
+  height: 70rpx;
+}
+.nav-scroll .nav-item {
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.nav-item .active {
+  border-bottom: 1rpx solid #d43c33;
+}
+
+/* 视频列表区域 */
+.video-scroll {
+  /* 视口单位： vh、vw 1vh = 1%的视口高度 1vw = 1%的视口宽度 */
+  height: calc(100vh - 160rpx);
+}
+.video-item {
+  padding: 0 4%;
+}
+.video-item video {
+  width: 100%;
+  height: 360rpx;
+  border-radius: 10rpx;
+}
+
+.video-item .common {
+  width: 100%;
+  height: 360rpx;
+  border-radius: 10rpx;
+}
+
+.video-item .video-title {
+  width: 670rpx;
+  padding: 0 15rpx;
+  font-size: 32rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.view-footer {
+  display: flex;
+  margin: 20rpx 0;
+}
+.view-footer .video-avatar {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  vertical-align:middle;
+  margin-left: 10rpx;
+}
+.view-footer .video-nickname {
+  font-size: 26rpx;
+  margin-left: 10rpx;
+  line-height: 48rpx;
+  flex: 1;
+}
+.view-footer .video-like {
+  display: flex;
+  margin-right: 20rpx;
+}
+.video-like .icon-xihuan {
+  font-size: 28rpx;
+  padding-top: 10rpx;
+}
+
+.video-like text {
+  font-size: 26rpx;
+  padding: 8rpx 10rpx;
+}
+.video-like .forward {
+  background: none;
+  width: 46rpx;
+  height: 46rpx;
+  padding-top: 4rpx;
+  padding-left: 10rpx;
+}

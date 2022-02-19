@@ -1,0 +1,36 @@
+<!-- pages/video/video.wxml -->
+<view class="videoContainer">
+  <!-- 头部搜索区域 -->
+  <view class="video-header">
+    <image src="/static/images/video/video.jpg"></image>
+    <input type="text" placeholder="nini" class="video-search"></input>
+    <image src="/static/images/logo.png"></image>
+  </view>
+  <!-- 导航区域 -->
+  <scroll-view class="nav-scroll" scroll-x enable-flex scroll-into-view="{{ 'scroll' + navId }}" scroll-with-animation>
+    <view class="nav-item" id="{{ 'scroll' + item.id }}" wx:for="{{ videoGroupList }}" wx:key="id">
+      <view class="nav-content {{ navId === item.id ? 'active' : ''}}" bindtap="changeNav" id="{{item.id}}">
+        {{ item.name }}
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 视频列表区域 -->
+  <scroll-view class="video-scroll" scroll-y refresher-enabled bindrefresherrefresh="handleRefresh" refresher-triggered="{{ isTriggered }}" bindscrolltolower="handleToLower">
+    <view class="video-item" wx:for="{{ videoList }}" wx:key="id">
+      <video src="{{ item.data.urlInfo.url }}" bindplay="handlePlay" id="{{ item.data.vid }}" poster="{{ item.data.coverUrl }}" wx:if="{{ videoId === item.data.vid }}" autoplay bindtimeupdate="handleTimeUpdate" bindended="handleEnded"></video>
+      <!-- 性能优化：使用image图片代替video标签 -->
+      <image class="common" src="{{ item.data.coverUrl }}" id="{{ item.data.vid }}" bindtap="handlePlay" wx:else></image>
+      <view class="video-title">{{ item.data.title }}</view>
+      <!-- 视频相关描述 -->
+      <view class="view-footer">
+        <image class="video-avatar" src="{{ item.data.creator.avatarUrl }}"></image>
+        <text class="video-nickname">{{ item.data.creator.nickname }}</text>
+        <view class="video-like">
+          <view class="iconfont icon-xihuan"></view>
+          <text>{{ item.data.praisedCount }}</text>
+          <button class="forward iconfont icon-31zhuanfa" open-type="share"></button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

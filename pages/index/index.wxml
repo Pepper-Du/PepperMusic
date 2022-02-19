@@ -1,0 +1,62 @@
+<!-- pages/index/index.wxml -->
+<view class="index-container">
+  <!-- 轮播图模块 -->
+  <swiper class="banners" indicator-dots indicator-color="ivory" indicator-active-color="#d43c33" autoplay>
+    <swiper-item wx:for="{{bannerList}}" wx:key="bannerId">
+      <image src="{{ item.pic }}"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 导航模块 -->
+  <view class="nav-container">
+    <view class="nav-item">
+      <span class="iconfont icon-meirituijian"></span>
+      <text>每日推荐</text>
+    </view>
+    <view class="nav-item">
+      <span class="iconfont icon-gedan"></span>
+      <text>歌单</text>
+    </view>
+    <view class="nav-item">
+      <span class="iconfont icon-paihangbang_paiming"></span>
+      <text>排行榜</text>
+    </view>
+    <view class="nav-item">
+      <span class="iconfont icon-diantai"></span>
+      <text>电台</text>
+    </view>
+    <view class="nav-item">
+      <span class="iconfont icon-zhibo"></span>
+      <text>直播</text>
+    </view>
+  </view>
+  <!-- 推荐歌曲模块 -->
+  <view class="recommend-container">
+    <!-- 推荐歌曲模块头部区域 -->
+    <NavHeader title="推荐歌曲" nav="为你精心推荐"></NavHeader>
+    <!-- 推荐歌曲模块内容区域 -->
+    <scroll-view class="recommend-scroll" enable-flex scroll-x>
+      <view class="scroll-item" wx:for="{{recommendList}}" wx:key="id">
+        <image src="{{ item.picUrl }}"></image>
+        <text>{{ item.name }}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 排行榜模块 -->
+  <view class="top-container">
+    <!-- 排行榜头部区域 -->
+    <NavHeader title="排行榜" nav="热歌风向标"></NavHeader>
+    <!-- 排行榜内容区域 -->
+    <swiper class="top-swiper" next-margin="50rpx">
+      <swiper-item wx:for="{{ topList }}" wx:key="id">
+        <view class="top-swiper-item">
+          <view class="top-swiper-title">{{ item.name }}</view>
+          <view class="top-music" wx:for="{{ item.tracks }}" wx:key="id" wx:for-item="musicItem">
+            <image src="{{ musicItem.al.picUrl }}"></image>
+            <text class="top-music-count">{{ index + 1 }}</text>
+            <text class="top-musicName">{{ musicItem.name }}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

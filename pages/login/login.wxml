@@ -1,0 +1,31 @@
+<!-- pages/login/login.wxml -->
+<view class="login-container">
+  <!-- 顶部欢迎文字 -->
+  <view class="login-wel">欢迎回来！</view>
+  <!-- 登录输入框 -->
+  <view class="input-content">
+    <view class="input-item">
+      <label class="tip">手机号码</label>
+      <input type="text" placeholder="请输入手机号码" id="phone" bindinput="handleInput"></input>
+    </view>
+    <view class="input-item" wx:if="{{ !isShow }}">
+      <label class="tip">密码</label>
+      <input type="text" password value="{{ password }}" placeholder="请输入密码" id="password" bindinput="handleInput"></input>
+      <view class="seePwd iconfont icon-yanjing_yincang" bindtap="safePwd"></view>
+    </view>
+    <view class="input-item" wx:if="{{ isShow }}">
+      <label class="tip">密码</label>
+      <input type="text" value="{{ password }}" placeholder="请输入密码" id="password" bindinput="handleInput"></input>
+      <view class="seePwd iconfont icon-yanjing-kai" bindtap="safePwd"></view>
+    </view>
+  </view>
+  <!-- 登录按钮 -->
+  <button class="login-btn" bindtap="login">登 录</button>
+  <!-- 忘记密码 -->
+  <view class="forget">忘记密码?</view>
+  <!-- 注册 -->
+  <view class="register">
+    还没有账号？
+    <text>马上注册</text>
+  </view>
+</view>

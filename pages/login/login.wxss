@@ -1,0 +1,72 @@
+/* pages/login/login.wxss */
+/* 顶部欢迎文字 */
+.login-wel {
+  color: #555;
+  font-size: 50rpx;
+  margin: 60rpx 50rpx;
+}
+
+/* 登录输入框 */
+.input-content {
+  padding: 0 70rpx;
+}
+.input-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 30rpx;
+  background: #f8f6fc;
+  height: 120rpx;
+  border-radius: 10rpx;
+  margin-bottom: 50rpx;
+}
+.input-item .tip {
+  line-height: 48rpx;
+  font-size: 26rpx;
+  color: #606266;
+}
+.input-item input {
+  color: #303133;
+  font-size: 30rpx;
+}
+.input-item .seePwd {
+  position: absolute;
+  right: 20rpx;
+  top:65rpx;
+}
+
+/* 登录按钮 */
+.login-btn {
+  width: 610rpx!important;
+  height: 76rpx;
+  background: #d43c33;
+  color: ivory;
+  border-radius: 50rpx;
+  font-size: 32rpx;
+}
+
+/* 忘记密码 */
+.forget {
+  font-size: 28rpx;
+  color: #4399fc;
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+/* 注册 */
+.register {
+  position: absolute;
+  left: 0;
+  bottom: 70rpx;
+  width: 100%;
+  font-size: 28rpx;
+  text-align: center;
+  color: #606266;
+}
+
+.register text {
+  color: #4399fc;
+}
+

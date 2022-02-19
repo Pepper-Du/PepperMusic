@@ -1,0 +1,28 @@
+<!-- pages/songDetail/songDetail.wxml -->
+<view class="songDetail-container">
+  <!-- 顶部歌名区域 -->
+  <view class="song">
+    <text class="song-name">{{ musicInfo.name }}</text>
+    <text class="song-author">{{ musicInfo.ar[0].name }}</text>
+  </view>
+  <!-- 摇杆 -->
+  <view class="circle"></view>
+  <image class="needle {{ isPlay && 'needleRotate' }}" src="/static/images/song/needle.png"></image>
+  <!-- 磁盘 -->
+  <view class="disc-container {{ isPlay && 'discAnimation' }}">
+    <image class="disc" src="/static/images/song/disc.png"></image>
+    <image class="song-pic" src="{{ musicInfo.al.picUrl }}"></image>
+  </view>
+  <!-- 底部控制区域 -->
+  <view class="song-control">
+    <view class="detail"></view>
+    <view class="long"></view>
+    <view class="control">
+      <text class="iconfont icon-loop big"></text>
+      <text class="iconfont icon-shangyishou-"></text>
+      <text class="iconfont {{ isPlay ? 'icon-play' : 'icon-timeout' }} bigger" bindtap="handleMusicPlay"></text>
+      <text class="iconfont icon-xiayishou-copy"></text>
+      <text class="iconfont icon-musiclist"></text>
+    </view>
+  </view>
+</view>

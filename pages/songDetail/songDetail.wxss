@@ -1,0 +1,122 @@
+/* pages/songDetail/songDetail.wxss */
+/* 背景 */
+.songDetail-container {
+  background: rgba(0,0,0,.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 顶部歌名区域 */
+.song {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400rpx;
+  margin-top: 20rpx;
+}
+.song .song-name {
+  font-size: 30rpx;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.song .song-author {
+  color: ghostwhite;
+  font-size: 26rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 摇杆 */
+/* 底座 */
+.circle {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 10rpx 0;
+  z-index: 999;
+}
+.needle {
+  position: relative;
+  top: -40rpx;
+  left: 56rpx;
+  width: 192rpx;
+  height: 274rpx;
+  z-index: 998;
+  transform-origin: 40rpx 0;
+  transform: rotate(-20deg);
+  transition: transform 1s;
+}
+.needleRotate {
+  transform: rotate(0);
+}
+
+/* 磁盘 */
+.disc-container {
+  position: relative;
+  top: -170rpx;
+  width: 598rpx;
+  height: 598rpx;
+}
+
+.discAnimation {
+  animation: disc 8s linear infinite;
+  animation-delay: .5s;
+}
+@keyframes disc {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.disc-container .disc {
+  width: 598rpx;
+  height: 598rpx;
+}
+.disc-container .song-pic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+}
+
+/* 底部控制区域 */
+.song-control {
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.control {
+  display: flex;
+}
+.control text {
+  width: 20%;
+  height: 120rpx;
+  color: #fff;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 60rpx;
+}
+.control .big {
+  font-size: 60rpx;
+}
+.control .bigger {
+  font-size: 120rpx;
+}
+.control .icon-musiclist {
+  font-size: 60rpx;
+}

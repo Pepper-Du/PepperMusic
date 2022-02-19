@@ -1,0 +1,90 @@
+/* pages/personal/personal.wxss */
+/* 个人信息模块 */
+.personal-container {
+  height: 100%;
+  background-color: #eee;
+}
+.user-info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20rpx 20rpx;
+  height: 260rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+.portrait-box {
+  margin: 50rpx 0 20rpx 0; 
+}
+.portrait-box image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+/* 个人中心导航模块 */
+.personNav {
+  display: flex;
+  height: 150rpx;
+  background-color: #fff;
+  margin: 0 20rpx 0;
+  border-radius: 20rpx;
+}
+.navItem {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  align-items: center;
+}
+.iconfont {
+  padding-top: 10rpx;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 60rpx;
+  color: #d43c33;
+}
+.navItem text {
+  font-size: 26rpx;
+}
+
+/* 个人中心列表模块 */
+.personContnent {
+  margin: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.recentPlayContainer .title {
+  font-size: 26rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+}
+.cardList .card-item {
+  line-height: 80rpx;
+  font-size: 26rpx;
+  padding: 0 20rpx;
+  border-top: 2rpx solid #eee;
+}
+.cardList .card-item .more {
+  float: right;
+}
+
+/* 最近播放列表 */
+.recent-scroll {
+  display: flex;
+  width: 675rpx;
+  height: 200rpx;
+  margin-left: 20rpx;
+}
+.recent-noPlay {
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+.recent-item {
+  width: 180rpx;
+  margin-right: 10rpx;
+}
+.recent-item image{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+}
