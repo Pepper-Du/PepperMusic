@@ -1,6 +1,6 @@
 // pages/recommendSong/recommendSong.js
 import request from '../../utils/request'
-
+import PubSub from 'pubsub-js'
 Page({
 
   /**
@@ -9,7 +9,8 @@ Page({
   data: {
     day: '', // 日
     month: '', // 月
-    recommendList: '' // 推荐列表
+    recommendList: '', // 推荐列表
+    index: 0 // 点击的音乐的下标
   },
 
   /**
@@ -44,6 +45,31 @@ Page({
 
     // 获取每日推荐的数据
     this.getRecommendListData()
+
+    // 订阅来自songDetai页面发布的消息
+    PubSub.subscribe('switchType', (msg, type) => {
+      let { recommendList, index } = this.data
+      if(type === 'pre') {
+        // 上一首
+        (index === 0) && (index = recommendList.length)
+        index -= 1
+      }else{
+        // 下一首
+        (index === recommendList.length - 1) && (index = -1)
+        index += 1
+      }
+
+      // 更新
+      this.setData({
+        index
+      })
+
+      // 上/下一首音乐的id
+      let musicId = recommendList[index].id
+      // 将上/下一首音乐的id回传给songDetail页面
+      PubSub.publish('musicId', musicId)
+
+    })
   },
 
   // 获取每日推荐的数据方法
@@ -56,7 +82,12 @@ Page({
 
   // 跳转至SongDetail页面
   toSongDetail(event) {
-    let song = event.currentTarget.dataset.song
+    let { song, index } = event.currentTarget.dataset
+    // let song = event.currentTarget.dataset.song
+    // let index = event.currentTarget.dataset.index
+    this.setData({
+      index
+    })
 
     wx.navigateTo({
       url: '/pages/songDetail/songDetail?musicId=' + song.id

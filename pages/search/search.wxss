@@ -1,0 +1,130 @@
+/* pages/search/search.wxss */
+.search-container {
+  padding: 0 20rpx;
+  height: 100%;
+  background: rgba(245,245,245,.5);
+}
+/* 头部搜索区域 */
+.search-hearder {
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 20rpx 0;
+}
+.search-input .search-icon {
+  position: absolute;
+  left: 15rpx;
+  top: 1rpx;
+  font-size: 36rpx;
+}
+.search-input {
+  position: relative;
+  flex: 1;
+  background: rgba(204, 204, 204, .3);
+  border-radius: 30rpx;
+}
+.search-clear {
+  position: absolute;
+  top: 16rpx;
+  width: 30rpx;
+  height: 30rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #a9a9a9;
+  right: 20rpx;
+  color: #fcfcfc;
+  z-index: 20;
+}
+.search-input input {
+  margin-left: 60rpx;
+  height: 60rpx;
+  font-size: 26rpx;
+}
+.search-cancle {
+  width: 100rpx;
+  text-align: center;
+}
+
+/* 搜索关键词 */
+.search-item {
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+.search-name {
+  flex: 1;
+  font-size: 26rpx;
+  border-bottom: 1rpx solid #eee;
+  margin-left: 10rpx;
+
+}
+
+/* 搜索的历史记录 */
+.history-container {
+  height: 60rpx;
+  line-height: 60rpx;
+  display:flex;
+}
+
+.history-title {
+  width: 80rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.history-scroll {
+  display: flex;
+  width: 580rpx;
+}
+.scroll-item {
+  padding: 0 20rpx;
+  margin: 0 10rpx;
+  background: rgba(204, 204, 204, .3);
+  border-radius: 25rpx;
+  font-size: 24rpx;
+  white-space: nowrap;
+}
+.history-icon {
+  width: 50rpx;
+  height: 80rpx;
+  color: grey;
+  text-align: center;
+}
+/* 热搜榜 */
+.hot-title {
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+/* 热搜榜列表区域 */
+.hot-list {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 20rpx;
+  border: 1rpx solid #eee;
+  padding: 25rpx 10rpx;
+}
+.hot-item {
+  width: 50%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hot-item .order {
+  margin: 0 20rpx;
+  color:#a9a9a9
+}
+.hot-item image {
+  width: 50rpx;
+  height: 25rpx;
+  margin-left: 10rpx;
+}

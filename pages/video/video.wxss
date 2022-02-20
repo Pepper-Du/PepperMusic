@@ -9,12 +9,16 @@
   height: 60rpx;
 
 }
-.video-header .video-search {
-  text-indent: 20rpx;
-  border: 1rpx solid #ddd;
+.video-search {
+  background: rgba(204, 204, 204, .3);
   border-radius: 25rpx;
   margin: 5rpx 20rpx;
   flex: 1;
+  display: flex;
+  justify-content:center;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color: #a9a9a9;
 }
 
 /* 导航区域 */

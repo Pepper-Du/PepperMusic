@@ -3,7 +3,10 @@
   <!-- 头部搜索区域 -->
   <view class="video-header">
     <image src="/static/images/video/video.jpg"></image>
-    <input type="text" placeholder="nini" class="video-search"></input>
+    <view class="video-search" bindtap="toSearch">
+      <text class="iconfont icon-sousuo search-icon"></text>
+      <view class="keyword">大家都在听</view>
+    </view>
     <image src="/static/images/logo.png"></image>
   </view>
   <!-- 导航区域 -->

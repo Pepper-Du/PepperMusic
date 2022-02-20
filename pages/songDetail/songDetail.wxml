@@ -13,15 +13,29 @@
     <image class="disc" src="/static/images/song/disc.png"></image>
     <image class="song-pic" src="{{ musicInfo.al.picUrl }}"></image>
   </view>
+
+  <!-- 进度条区域 -->
+  <view class="progress-control">
+    <text>{{ currentTime }}</text>
+    <!-- 总进度条 -->
+    <view class="bar-control">
+      <!-- 实时进度条 -->
+      <view class="current-bar" style="width: {{ currentWidth }}%">
+        <!-- 小圆点 -->
+        <view class="bar-circle"></view>
+      </view>
+    </view>
+    <text>{{ durationTime }}</text>
+  </view>
   <!-- 底部控制区域 -->
   <view class="song-control">
     <view class="detail"></view>
     <view class="long"></view>
     <view class="control">
       <text class="iconfont icon-loop big"></text>
-      <text class="iconfont icon-shangyishou-"></text>
+      <text class="iconfont icon-shangyishou-" id="pre" bindtap="handleSwitchMusic"></text>
       <text class="iconfont {{ isPlay ? 'icon-play' : 'icon-timeout' }} bigger" bindtap="handleMusicPlay"></text>
-      <text class="iconfont icon-xiayishou-copy"></text>
+      <text class="iconfont icon-xiayishou-copy" id="next" bindtap="handleSwitchMusic"></text>
       <text class="iconfont icon-musiclist"></text>
     </view>
   </view>

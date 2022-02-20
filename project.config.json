@@ -42,7 +42,7 @@
     "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.21.4",
+  "libVersion": "2.22.0",
   "appid": "wxf143da6b8eba1586",
   "projectname": "PepperMusic",
   "debugOptions": {

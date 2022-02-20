@@ -8,7 +8,7 @@
   </swiper>
   <!-- 导航模块 -->
   <view class="nav-container">
-    <view class="nav-item">
+    <view class="nav-item" bindtap="toRecommendSong">
       <span class="iconfont icon-meirituijian"></span>
       <text>每日推荐</text>
     </view>
