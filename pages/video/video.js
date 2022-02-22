@@ -132,7 +132,7 @@ Page({
   // 跳转至搜索页面
   toSearch() {
     wx.navigateTo({
-      url: '/pages/search/search'
+      url: '/searchPackage/pages/search/search'
     })
   },
   // 自定义scroll-view上拉触底刷新

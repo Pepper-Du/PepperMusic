@@ -1,5 +1,5 @@
 // pages/search/search.js
-import request from '../../utils/request'
+import request from '../../../utils/request'
 let timer = null
 Page({
 

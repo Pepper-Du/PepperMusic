@@ -1,13 +1,30 @@
 {
   "pages": [
-    "pages/video/video",
-
     "pages/index/index",
-    "pages/search/search",
-    "pages/recommendSong/recommendSong",
-    "pages/songDetail/songDetail",
-    "pages/personal/personal",
-    "pages/login/login"
+    "pages/video/video",
+    "pages/personal/personal"
+  ],
+  "subpackages": [
+    {
+      "root": "songPackage",
+      "pages": [
+        "pages/recommendSong/recommendSong",
+        "pages/songDetail/songDetail"
+      ]
+    }, 
+    {
+      "root": "loginPackage",
+      "pages": [
+        "pages/login/login"
+      ]
+    },
+    {
+      "root": "searchPackage",
+      "pages": [
+        "pages/search/search"
+      ]
+    }
+
   ],
   "window": {
     "backgroundTextStyle": "light",

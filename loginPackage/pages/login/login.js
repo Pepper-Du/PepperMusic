@@ -1,5 +1,5 @@
 // pages/login/login.js
-import request from '../../utils/request.js'
+import request from '../../../utils/request.js'
 
 Page({
 

@@ -1,5 +1,5 @@
 // pages/songDetail/songDetail.js
-import request from '../../utils/request'
+import request from '../../../utils/request'
 import PubSub from 'pubsub-js'
 import moment from 'moment'
 
